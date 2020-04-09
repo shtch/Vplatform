@@ -2,9 +2,9 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ru.vapp</groupId>
     <artifactId>vplatform</artifactId>
-    <name>Vplatform</name>
-    <version>0.1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <name>VPlatform</name>
+    <version>2.1-SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
