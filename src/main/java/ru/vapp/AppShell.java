@@ -3,6 +3,11 @@ package ru.vapp;
 import com.vaadin.flow.component.page.AppShellConfigurator;
 import com.vaadin.flow.server.PWA;
 
-@PWA(name = "Project Base for Vaadin Flow with Spring", shortName = "Project Base")
+// chrome://apps/
+
+@PWA(name = "VPlatform Application",
+        shortName = "VPlatform",
+        description = "This is an example Vaadin application.",
+        enableInstallPrompt = true)
 public class AppShell implements AppShellConfigurator {
 }

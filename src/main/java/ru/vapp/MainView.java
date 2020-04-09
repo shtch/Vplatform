@@ -29,10 +29,6 @@ import org.springframework.beans.factory.annotation.Autowired;
  * that shows a greeting message in a notification.
  */
 @Route
-@PWA(name = "VPlatform Application",
-        shortName = "VPlatform",
-        description = "This is an example Vaadin application.",
-        enableInstallPrompt = true)
 @CssImport("./styles/shared-styles.css")
 @CssImport(value = "./styles/vaadin-text-field-styles.css", themeFor = "vaadin-text-field")
 public class MainView extends VerticalLayout {
