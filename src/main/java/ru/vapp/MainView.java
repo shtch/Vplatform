@@ -7,6 +7,8 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.dom.Element;
+import com.vaadin.flow.dom.ElementFactory;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,10 +24,13 @@ import org.springframework.beans.factory.annotation.Autowired;
  * <p>
  * A new instance of this class is created for every new user and every
  * browser tab/window.
+ * <p>
+ * The main view contains a text field for getting the user name and a button
+ * that shows a greeting message in a notification.
  */
 @Route
-@PWA(name = "Vaadin Application",
-        shortName = "Vaadin App",
+@PWA(name = "VPlatform Application",
+        shortName = "VPlatform",
         description = "This is an example Vaadin application.",
         enableInstallPrompt = true)
 @CssImport("./styles/shared-styles.css")
@@ -60,6 +65,11 @@ public class MainView extends VerticalLayout {
         addClassName("centered-content");
 
         add(textField, button);
+        
+     // simple link to the logout endpoint provided by Spring Security
+        Element logoutLink = ElementFactory.createAnchor("logout", "Logout"); // (1)
+        getElement().appendChild(logoutLink); // (2)  
+        
     }
 
 }
